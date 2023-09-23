@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Work and Break timer",
+  "description": "A simple Pomodoro timer extension",
+  "version": "1.69.0",
+  "permissions": ["activeTab", "storage"],
+  "icons": {
+    "48": "download.png"
+  },
+  "action": {
+    "default_popup": "pika.html",
+    "default_icon": {
+      "16": "download.png",
+      "48": "download.png",
+      "128": "download.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ]
+}
